@@ -1,9 +1,9 @@
 function [  ] = Untitled2( data,path,lable)
-%UNTITLED6 ´Ë´¦ÏÔÊ¾ÓĞ¹Ø´Ëº¯ÊıµÄÕªÒª
-%   ´Ë´¦ÏÔÊ¾ÏêÏ¸ËµÃ÷
+%UNTITLED6 æ­¤å¤„æ˜¾ç¤ºæœ‰å…³æ­¤å‡½æ•°çš„æ‘˜è¦
+%   æ­¤å¤„æ˜¾ç¤ºè¯¦ç»†è¯´æ˜
 
 fs=2048; 
-%²ÉÑùÆµÂÊ
+%é‡‡æ ·é¢‘ç‡
 num_samples =1000;
 resampleing = floor(((length(data))-fs)/(num_samples-1))  
 
@@ -15,8 +15,8 @@ for k=1:num_samples
     data1=data(k1:k2,:)
 
     %ylim([20,120])
-    %xlabel('Ê±¼ä t/s')
-    %ylabel('ÆµÂÊ f/Hz')fs=320
+    %xlabel('æ—¶é—´ t/s')
+    %ylabel('é¢‘ç‡ f/Hz')fs=320
     %t=0:25.6/320:25.6
     dt=1/fs
     timesrart=0
@@ -29,7 +29,7 @@ for k=1:num_samples
    %ylim([10,120])
      %xlim([-0.1,3.3])
     %shading flat
-    %title('Ğ¡²¨Ê±ÆµÍ¼')
+    %title('å°æ³¢æ—¶é¢‘å›¾')
     str='train\1.png';
   
     saveas(gcf,str);
